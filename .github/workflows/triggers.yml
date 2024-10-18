@@ -1,0 +1,16 @@
+name: Triggers
+on:
+  push:
+    branches:
+      - 'aprendiendo-github-actions'
+  pull_request:
+    types: [synchronize]
+  issues:
+    types: [opened]
+jobs:
+  naming-triggers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: notify
+        run: echo "triggers present"
