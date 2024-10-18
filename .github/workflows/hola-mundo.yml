@@ -1,0 +1,12 @@
+name: hola-mundo
+
+on:
+  push:
+
+jobs:
+  hola-mundo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: print-hola-mundo
+        run: rustc ./main.rs && ./main
