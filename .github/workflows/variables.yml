@@ -1,0 +1,11 @@
+name: Variables
+run-name: Probando variables
+on:
+  push
+
+jobs:
+  echo-text:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrando variable
+        run: echo "${{var.TEST}}"
